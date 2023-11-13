@@ -196,6 +196,26 @@ result = panel.add_user(user=user, token=token) #return new User object
 
 print(result.username) #-> Mewhrzad, #user.proxies, #user.inbounds, #user.expire, #user.data_limit, #userdata_limit_reset_strategy, #user.status, #user.used_traffic, #user.lifetime_used_traffic, #user.created_at, #user.links, #user.subscription_url, #user.excluded_inbounds
 ```
+### Add User With Flow
+```python
+user = User(
+    username="Mewhrzad",
+    proxies={
+        "vmess": {"id": "35e7e39c-7d5c-1f4b-8b71-508e4f37ff53", "flow": "xtls-rprx-vision"},
+        "vless": {"id": "35e7e39c-7d5c-1f4b-8b71-508e4f37ff53", "flow": "xtls-rprx-vision"},
+    },
+    inbounds={"vmess": ["VMess TCP"], "vless": ["VLESS TCP REALITY"]},
+    expire=0,
+    data_limit=0,
+    data_limit_reset_strategy="no_reset",
+)
+result = panel.add_user(user=user, token=token) #return new User object
+
+print(result.username) #-> K4sra, #result.proxies, #result.inbounds, #result.expire, #result.data_limit,  #result.status, #result.used_traffic, #result.lifetime_used_traffic, #result.created_at, #result.links, #result.subscription_url, #result.excluded_inbounds
+```
+
+
+
 ### Get User
 ```python
 result = panel.get_user("Mewhrzad",token=mytoken) #return User object
