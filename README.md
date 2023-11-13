@@ -444,3 +444,12 @@ original_date = datetime.strptime(original_date_string, "%Y-%m-%dT%H:%M:%S.%f")
 jalali_date = JalaliDateTime.to_jalali(original_date)
 print(jalali_date)
 ```
+
+### Covert Day to timestemp
+```python
+import time
+current_time = int(time.time())
+days_to_add = 30
+seconds_in_a_day = 86400
+# example usage current_time + (days_to_add * seconds_in_a_day)
+```
