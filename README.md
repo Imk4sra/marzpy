@@ -65,7 +65,7 @@ mytoken = panel.get_token()
 - other For Make Script Or Bot
     - [Convert Gigabyte To Byte](#Convert-Gigabyte-To-Byte)
     - [Create Random UUID](#Create-Random-UUID)
-    - [Converting Persian (Jalali) Date to Gregorian Date](#Converting-Persian-(Jalali)-Date-to-Gregorian-Date)
+    - [Converting Persian (Jalali) Date to Gregorian Date](#Converting-Persian-Date-to-Gregorian-Date)
 
 ## Thanks To 
 
@@ -427,7 +427,7 @@ bytes_result = gigabytes_to_bytes(gigabytes_value)
 
 print(f"{gigabytes_value} gigabytes is equal to {bytes_result} bytes.")
 ```
-### Converting Persian (Jalali) Date to Gregorian Date
+### Converting Persian Date to Gregorian Date
 ## Requirements
 ```
 pip install persiantools
