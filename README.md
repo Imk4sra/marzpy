@@ -409,7 +409,7 @@ def gigabytes_to_bytes(gigabytes):
     bytes = gigabytes * bytes_in_a_gb
     return bytes
 ```
-##Example Usage
+## Example Usage
 ```python
 def gigabytes_to_bytes(gigabytes):
     bytes_in_a_gb = 1024**3
