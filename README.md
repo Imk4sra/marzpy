@@ -214,7 +214,29 @@ result = panel.add_user(user=user, token=token) #return new User object
 print(result.username) #-> K4sra, #result.proxies, #result.inbounds, #result.expire, #result.data_limit,  #result.status, #result.used_traffic, #result.lifetime_used_traffic, #result.created_at, #result.links, #result.subscription_url, #result.excluded_inbounds
 ```
 
+### Create Random UUID
+## Requirements
+```
+pip install uuid
+```
+```python
+import uuid
 
+def generate_custom_formatted_uuid():
+    uuid_str = str(uuid.uuid4())
+    formatted_uuid = '-'.join([
+        uuid_str[:8],
+        uuid_str[8:12],
+        '1' + uuid_str[13],
+        '8' + uuid_str[14],
+        uuid_str[15:],
+    ])
+    return formatted_uuid
+
+# Example usage
+custom_uuid_str = generate_custom_formatted_uuid()
+print(custom_uuid_str)
+```
 
 ### Get User
 ```python
