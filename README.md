@@ -214,30 +214,6 @@ result = panel.add_user(user=user, token=token) #return new User object
 print(result.username) #-> K4sra, #result.proxies, #result.inbounds, #result.expire, #result.data_limit,  #result.status, #result.used_traffic, #result.lifetime_used_traffic, #result.created_at, #result.links, #result.subscription_url, #result.excluded_inbounds
 ```
 
-### Create Random UUID
-## Requirements
-```
-pip install uuid
-```
-```python
-import uuid
-
-def generate_custom_formatted_uuid():
-    uuid_str = str(uuid.uuid4())
-    formatted_uuid = '-'.join([
-        uuid_str[:8],
-        uuid_str[8:12],
-        '1' + uuid_str[13],
-        '8' + uuid_str[14],
-        uuid_str[15:],
-    ])
-    return formatted_uuid
-
-# Example usage
-custom_uuid_str = generate_custom_formatted_uuid()
-print(custom_uuid_str)
-```
-
 ### Get User
 ```python
 result = panel.get_user("Mewhrzad",token=mytoken) #return User object
@@ -402,4 +378,47 @@ for node in result:
     print(node)
 #output:{'node_id': 1, 'node_name': 'N1', 'uplink': 1000000000000, 'downlink': 1000000000000}
 # {'node_id': 2, 'node_name': 'N2', 'uplink': 1000000000000, 'downlink': 1000000000000}
+```
+### Create Random UUID
+## Requirements
+```
+pip install uuid
+```
+```python
+import uuid
+
+def generate_custom_formatted_uuid():
+    uuid_str = str(uuid.uuid4())
+    formatted_uuid = '-'.join([
+        uuid_str[:8],
+        uuid_str[8:12],
+        '1' + uuid_str[13],
+        '8' + uuid_str[14],
+        uuid_str[15:],
+    ])
+    return formatted_uuid
+
+# Example usage
+custom_uuid_str = generate_custom_formatted_uuid()
+print(custom_uuid_str)
+```
+### Convert Gigabyte To Byte
+```python
+def gigabytes_to_bytes(gigabytes):
+    bytes_in_a_gb = 1024**3  
+    bytes = gigabytes * bytes_in_a_gb
+    return bytes
+```
+##Example Usage
+```python
+def gigabytes_to_bytes(gigabytes):
+    bytes_in_a_gb = 1024**3
+    bytes_result = gigabytes * bytes_in_a_gb
+    return bytes_result
+
+# Example usage
+gigabytes_value = 5
+bytes_result = gigabytes_to_bytes(gigabytes_value)
+
+print(f"{gigabytes_value} gigabytes is equal to {bytes_result} bytes.")
 ```
