@@ -40,6 +40,7 @@ mytoken = panel.get_token()
     - [modify core config](#modify-core-config)
 - User
     - [add user](#add-user)
+    - [add user With Flow](#Add-User-With-Flow)
     - [get user](#get-user)
     - [modify user](#modify-user)
     - [remove user](#remove-user)
@@ -66,6 +67,7 @@ mytoken = panel.get_token()
     - [Convert Gigabyte To Byte](#Convert-Gigabyte-To-Byte)
     - [Create Random UUID](#Create-Random-UUID)
     - [Converting Persian (Jalali) Date to Gregorian Date](#Converting-Persian-Date-to-Gregorian-Date)
+    - [Covert Day To Time Stemp](#Covert-Day-to-timestemp)
 
 ## Thanks To 
 
