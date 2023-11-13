@@ -63,8 +63,9 @@ mytoken = panel.get_token()
     - [get all nodes usage](#get-node-usage)
     
 - other For Make Script Or Bot
-- [Convert Gigabyte To Byte](#Convert-Gigabyte-To-Byte)
-- [Create Random UUID](#Create-Random-UUID)
+    - [Convert Gigabyte To Byte](#Convert-Gigabyte-To-Byte)
+    - [Create Random UUID](#Create-Random-UUID)
+    - [Converting Persian (Jalali) Date to Gregorian Date](#Converting-Persian-(Jalali)-Date-to-Gregorian-Date)
 
 ## Thanks To 
 
@@ -425,4 +426,21 @@ gigabytes_value = 5
 bytes_result = gigabytes_to_bytes(gigabytes_value)
 
 print(f"{gigabytes_value} gigabytes is equal to {bytes_result} bytes.")
+```
+### Converting Persian (Jalali) Date to Gregorian Date
+## Requirements
+```
+pip install persiantools
+```
+## Example Code 
+```python
+from persiantools.jdatetime import JalaliDateTime
+import datetime
+
+result = panel.get_user("K4sra",token=mytoken)
+
+original_date_string = result.created_at
+original_date = datetime.strptime(original_date_string, "%Y-%m-%dT%H:%M:%S.%f")
+jalali_date = JalaliDateTime.to_jalali(original_date)
+print(jalali_date)
 ```
